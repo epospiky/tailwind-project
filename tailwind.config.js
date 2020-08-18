@@ -1,8 +1,17 @@
 module.exports = {
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      rotate: {
+        '270':'270deg',
+      },
+      colors:{
+        greenfordark: '#CBFDC3',
+      }
+    },
   },
-  variants: {},
+  variants: {
+    backgroundColor:['responsive','hover', 'focus', 'active']
+  },
   plugins: [],
 }

@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
+
+
+.btn{
+    @apply inline-block font-semibold tracking-wider uppercase shadow-lg rounded-lg px-5 py-3;
+}
+
+.btn:focus{
+    @apply outline-none shadow-outline;
+}
+
+.btn-indigo {
+    @apply  bg-indigo-500 text-sm text-white;
+}
+
+.btn-indigo:hover {
+    @apply  bg-indigo-400; 
+}
+.btn-indigo:active {
+    @apply bg-indigo-700;
+}
+
+.btn-gray {
+    @apply  bg-gray-500 text-sm text-black ml-2;
+}
+
+.btn-gray:hover {
+    @apply  bg-gray-400; 
+}
+
+.btn-gray:active {
+    @apply bg-gray-700;
+}
+
+@screen xl{
+    .btn-indigo, .btn-gray {
+        @apply text-3xl;
+    }
+    .btn-indigo:hover{
+        @apply bg-green-400;
+    }
+}
+
+@screen sm{
+
+    .btn-indigo, .btn-gray{
+        @apply text-base;
+    }
+}
+
 @tailwind utilities;
