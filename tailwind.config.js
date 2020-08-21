@@ -1,12 +1,16 @@
 module.exports = {
   purge: [],
   theme: {
+          colors:{
+        greenfrdark: '#CBFDC3',
+      }, 
     extend: {
       rotate: {
         '270':'270deg',
       },
-      colors:{
-        greenfordark: '#CBFDC3',
+
+      backgroundColor:{
+        greenfrdark: '#CBFDC3',
       }
     },
   },

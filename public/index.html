@@ -7,72 +7,95 @@
 </head>
 <body class="bg-white-100">
     <div class="px-6">
-        <nav class="relative flex justify-between items-center flex-wrap bg-white-100 pt-6 ">
-            <div id="logo"><a href="#"><img id="logo-img" src="../img/logo-lg.png" alt=""></a></div>
-            <div id="handburger" class="lg:hidden "><button class="focus:outline-none" id="navbar-Btn"><img id="handburger-img" src="../img/handburger.png" alt=""></button>  </div>
-            <div class="relative flex w-full block flex-grow text-center align-center justify-center" id="navbar">
-                <button class="absolute lg:hidden left-0 top-0 focus:outline-none" id="closeBtn"><img id="close-img" src="../img/x-circle.png" alt=""></button>
-                <a class="text-gray-900 block lg:inline-block mt-12 lg:mt-0 lg:mr-4 font-semibold">Home</a>
-                <a class="text-gray-900 block lg:inline-block mt-6 lg:mt-0 lg:mr-4 font-semibold">About</a>
-                <a class="text-gray-900 block lg:inline-block mt-6 lg:mt-0 lg:mr-8 font-semibold" >Portfolio</a>
-                <a class="lg:absolute text-gray-900 bg-indigo-100 py-2 px-0 lg:px-4 block lg:inline-block mt-12 lg:mt-0 lg:mr-0 right-0 font-semibold text-indigo-400 cont-me" >Contact Me</a>
-                <div class="custom-control custom-switch justify-content-end">
-                    <input type="checkbox" name="" id="customSwitch" class="custom-control-input">
-                    <label for="customSwitch" class="custom-control-label" onclick="darkMode()">Toggle DarkMode</label>
-                </div>
-            </div>
-
-        </nav>
-        <div class="flex mt-6">
-            <div class=""></div>
-            <div class="">
-                <div   class="relative w-full object-cover right-0" >
-                  <!--   <source  class="relative w-full object-cover right-0" srcset="../img/smallscreen.png" media="(max-width:640px)">
-                    <source  class="relative w-full object-cover right-0"  srcset="../img/largescreen.png" media="(min-width:641px)">   
-                   -->  <img src="../img/largescreen.png" class="h-64 sm:h-auto relative w-full object-cover right-0" alt="art image" srcset="">
-                </div>
-                <div class="relative text-gray-800 bg-indigo-100 py-20 pl-12 pr-12 dm-bg">
-                    <div class="absolute right-0 mr-6 top-0 mt-2">
-                        <span class="inline-block mr-4 bg-red-500 h-1 w-12 border-none rounded-full"></span> 
-                        <span class="inline-block bg-indigo-600 h-1 w-6 border-none rounded-full"></span>
+        <div class="lg:h-screen">
+            <nav class="relative flex justify-between items-center flex-wrap bg-white-100 pt-6 ">
+                <div id="logo" class="inline-block"><a href="#"><img id="logo-img" src="../img/logo-lg.png" alt=""></a></div>
+                <div id="handburger" class="lg:hidden "><button class="focus:outline-none" id="navbar-Btn"><img id="handburger-img" src="../img/handburger.png" alt=""></button>  </div>
+                <div class="relative  lg:w-auto sm:w-full  block flex-grow text-center  lg:inline-block" id="navbar">
+                    <button class="absolute lg:hidden left-0 top-0 focus:outline-none" id="closeBtn"><img id="close-img" src="../img/x-circle.png" alt=""></button>
+                    <a class="text-gray-900 block lg:inline-block mt-12 lg:mt-0 lg:mr-4 font-semibold">Home</a>
+                    <a class="text-gray-900 block lg:inline-block mt-6 lg:mt-0 lg:mr-4 font-semibold">About</a>
+                    <a class="text-gray-900 block lg:inline-block mt-6 lg:mt-0 lg:mr-8 font-semibold" >Portfolio</a>
+                    <a class="lg:absolute text-gray-900 bg-indigo-100 py-2 px-0 lg:px-4 block lg:inline-block mt-12 lg:mt-0 lg:mr-0 right-0 font-semibold text-indigo-400 cont-me" >Contact Me</a>
+                    <div class="custom-control">
+                        <input type="checkbox" name="" id="customSwitch" class="custom-control-input">
+                        <label for="customSwitch" class="custom-control-label" onclick="darkMode()">Toggle DarkMode</label>
                     </div>
-                    <h4 class="text-lg font-bold">Adding Colors <br> To Reality</h4>
-                    <p class="text-md ">The world is a canva. <br>
-                        Momento helps you draw a <br>
-                        perfect memory
-                    </p>
+                </div>
+
+            </nav>
+            <div class="mt-6">
+                <div class="lg:flex lg:justify-between">
+                    <div class=" relative   lg:w-1/2 hidden sm:hidden lg:block lg:flex">
+                        <div class=" inline-block mt-64 h-64 z-10">
+                            <img src="../img/hidden.png" alt="" class="h-64 w-64">
+                        </div>
+                        <div class="relative inline-block text-gray-800 bg-indigo-100 mt-24 py-16 px-20 h-64 -ml-16 dm-bg">
+                            <div class="absolute right-0 mr-6 top-0 mt-2">
+                                <span class="inline-block mr-4 bg-red-500 h-1 w-12 border-none rounded-full"></span> 
+                                <span class="inline-block bg-indigo-600 h-1 w-6 border-none rounded-full"></span>
+                            </div>
+                            <h4 class="text-lg font-bold">Adding Colors <br> To Reality</h4>
+                            <p class="text-md ">The world is a canva. <br>
+                                Momento helps you draw a <br>
+                                perfect memory
+                            </p>
+                        </div>
+                    </div>
+
+                    <div   class="relative  lg:w-auto  lg:w-1/2 right-0 mr-0 h-full overflow-y-hidden" >
+                    <!--   <source  class="relative w-full object-cover right-0" srcset="../img/smallscreen.png" media="(max-width:640px)">
+                        <source  class="relative w-full object-cover right-0"  srcset="../img/largescreen.png" media="(min-width:641px)">   
+                    -->  <img src="../img/largescreen.png" class="sm:h-screen m:h-auto relative w-full  right-0" alt="art image" srcset="">
+                    </div>
+                    <div class="relative block lg:hidden text-gray-800 bg-indigo-100 py-20 pl-12 pr-12 dm-bg">
+                        <div class="absolute right-0 mr-6 top-0 mt-2">
+                            <span class="inline-block mr-4 bg-red-500 h-1 w-12 border-none rounded-full"></span> 
+                            <span class="inline-block bg-indigo-600 h-1 w-6 border-none rounded-full"></span>
+                        </div>
+                        <h4 class="text-lg font-bold">Adding Colors <br> To Reality</h4>
+                        <p class="text-md ">The world is a canva. <br>
+                            Momento helps you draw a <br>
+                            perfect memory
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="flex lg:justify-center flex-col mt-6">
-            <div>
-                <img src="../img/about-pic.png"  class="object-full w-full" alt="">
+        </div>    
+        <div class="relative lg:flex justify-between  mt-6 lg:mt-6">
+            <div class="relative lg:w-5/12 lg:mt-6">
+                <img src="../img/about-pic.png"  class="object-cover w-full " alt="">
             </div>
-            <div class="relative pt-12 px-4 pl-12 lg:pl-12 bg-indigo-100 dm-bg">
-                <h6 class="absolute right-0 font-bold text-lg text-gray-400 uppercase transform mt-4 tracking-widest rotate-90">about</h6>
-                <h4 class="mt-8 font-bold text-gray-800 text-lg">I’m <br> Steve OX</h4>
-                <p class="mt-2 text-gray-800 pb-6 md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non sed mauris pellentesque mauris, 
-                    lacinia diam lectus. Non gravida feugiat tortor proin eleifend aliquet orci cras. Dapibus ultricies 
-                    sit tincidunt dolor. Ultrices ac proin lorem mattis ornare erat felis etiam. Odio cursus justo in amet 
-                    duis. Massa mattis nunc potenti gravida mauris duis sollicitudin elit. Dignissim urna diam venenatis 
-                    sapien mattis nulla malesuada amet. Facilisi risus adipiscing dolor tortor, mattis id proin. Urna, 
-                    vel facilisi sed tortor id odio facilisis. Tempor augue urna ac elit imperdiet vitae mi semper magnis. 
-                    Nisi, blandit a urna, at ut. Magna interdum nulla duis et. Cras risus amet, tellus consectetur. Vel 
-                    bibendum quis pellentesque diam aliquam dolor amet, eros. Et enim facilisis in vel scelerisque duis tempor, 
-                    eleifend at. Ridiculus ornare viverra nunc, lectus risus, ultricies tortor</p>
-            </div>
+                <div class="hidden lg:block absolute lg:w-7/12 right-0 mr-8">
+                    <div class="relative pt-12 px-4 pl-12 lg:pl-12 lg:pb-16 bg-indigo-100 dm-bg  lg:right-0 lg:mr-0 lg:h-full ">
+                        <h6 class="absolute right-0 font-bold text-lg text-gray-400 uppercase transform mt-4 tracking-widest rotate-90">about</h6>
+                        <h4 class="mt-8 font-bold text-gray-800 text-lg">I’m <br> Steve OX</h4>
+                        <p class="mt-2 text-gray-800 pb-6 md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non sed mauris pellentesque mauris, 
+                            lacinia diam lectus. Non gravida feugiat tortor proin eleifend aliquet orci cras. Dapibus ultricies 
+                            sit tincidunt dolor. Ultrices ac proin lorem mattis ornare erat felis etiam. Odio cursus justo in amet 
+                            duis. Massa mattis nunc potenti gravida mauris duis sollicitudin elit. Dignissim urna diam venenatis 
+                            sapien mattis nulla malesuada amet. Facilisi risus adipiscing dolor tortor, mattis id proin. Urna, 
+                            vel facilisi sed tortor id odio facilisis. Tempor augue urna ac elit imperdiet vitae mi semper magnis. 
+                            Nisi, blandit a urna, at ut. Magna interdum nulla duis et. Cras risus amet, tellus consectetur. Vel 
+                            bibendum quis pellentesque diam aliquam dolor amet, eros. Et enim facilisis in vel scelerisque duis tempor, 
+                            eleifend at. Ridiculus ornare viverra nunc, lectus risus, ultricies tortor</p>
+                    </div>
+                </div>    
         </div>
-        <div class="" >
+        <div class="port" >
             <h4 class="text-lg text-gray-900 text-center font-bold py-6">Portfolio</h4>
-            <div class="mt-2"><img src="../img/port-img1.png" class="object-cover w-full" alt=""></div>
-            <div class="mt-2"><img src="../img/port-img2.png" class="object-cover w-full" alt=""></div>
-            <div class="mt-2"><img src="../img/port-img3.png" class="object-cover w-full" alt=""></div>
-            <div class="mt-2"><img src="../img/port-img4.png" class="object-cover w-full" alt=""></div>
-            <div class="mt-2"><img src="../img/port-img5.png" class="object-cover w-full" alt=""></div>
-            <div class="mt-2"><img src="../img/port-img6.png" class="object-cover w-full" alt=""></div>
-            <div class="mt-2"><img src="../img/port-img7.png" class="object-cover w-full" alt=""></div>
-        </div>
-        <div class="mt-8">
+                <div class="lg:grid gap-6  grid-cols-2">
+                    <div class="mt-2"><img src="../img/port-img1.png" class="object-cover w-full" alt=""></div>
+                    <!-- <div class="mt-2"><img src="../img/port-img2.png" class="object-cover w-full" alt=""></div> -->
+                    <div class="mt-2"><img src="../img/port-img3.png" class="object-cover w-full" alt=""></div>
+                    <div class="mt-2"><img src="../img/port-img4.png" class="object-cover w-full" alt=""></div>
+                    <div class="mt-2"><img src="../img/port-img5.png" class="object-cover w-full" alt=""></div>
+                    <div class="mt-2"><img src="../img/port-img6.png" class="object-cover w-full" alt=""></div>
+                    <div class="mt-2"><img src="../img/port-img7.png" class="object-cover w-full" alt=""></div>
+       
+                </div>
+            </div>        
+         <div class="mt-8">
             <div><img src="../img/perfectionist.png" class="object-cover w-full" alt=""></div>
             <div class="bg-indigo-100 text-center px-4 py-6 dm-bg">
                 <h5 class="absolute left-0 font-bold text-lg text-gray-400 uppercase  mt-4 tracking-widest transform rotate-270 " >REVIEWS</h5>
@@ -89,8 +112,8 @@
             <form action="">
                 <input  type="text" class="block w-full py-2 px-2 outline-none  border-b-2 border-gray-700  placeholder-gray-700 dk-input" placeholder="Name">
                 <input  type="text" class="block w-full py-2 px-2  outline-none  border-b-2 border-gray-700  placeholder-gray-700 dk-input" placeholder="Email">
-                <textarea name="" id="" cols="30" rows="10" class="w-full outline-none border-b-2 border-gray-700  py-2 px-2 placeholder-gray-700 dk-input" placeholder="Message"></textarea>
-                <button class="mt-2 w-20 py-4 px-6 box-content outline-none focus:outline-none rounded hover:shadow-outline-gray-300 hover:shadow-md"><img src="../img/arrow-right.png" class="w-full h-8" alt=""></button>
+                <textarea name="" id="" cols="30" rows="10" class="h-10 w-full outline-none border-b-2 border-gray-700  py-2 px-2 placeholder-gray-700 dk-input" placeholder="Message"></textarea>
+                <button class="mt-2 w-20 py-4 px-6 box-content outline-none focus:outline-none rounded hover:shadow-outline-gray-300 hover:shadow-md hover:border-b-2 border-gray-700"><img src="../img/arrow-right.png" class="w-full h-8" alt=""></button>
             </form>
         </div>
         <div class="relative left-0 right-0 -ml-6 px-6 -mr-6 mt-4 py-6 text-gray-800 bg-indigo-100 dm-bg">
@@ -150,11 +173,14 @@
                 var letstalk = $('.letstalk');
                 var darkInput = $('.dk-input');
                 var contactMe = $('.cont-me');
+                var port_header = $('.port h4');
+
 
                body.toggleClass('bg-white-300 bg-gray-900');
                navItems.toggleClass('text-gray-900 text-white');
                contactMe.toggleClass('bg-green-100 text-gray-900 text-green-400');
                dm_bg.toggleClass('bg-indigo-100 bg-green-300');
+               port_header.toggleClass('text-gray-900 text-gray-100')
                letstalk.toggleClass('text-gray-900 text-white');
                darkInput.toggleClass('bg-gray-900 border-gray-700 border-gray-100  placeholder-gray-700  placeholder-gray-100');
 

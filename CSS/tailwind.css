@@ -1,7 +1,5 @@
 @tailwind base;
 @tailwind components;
-
-
 .btn{
     @apply inline-block font-semibold tracking-wider uppercase shadow-lg rounded-lg px-5 py-3;
 }
