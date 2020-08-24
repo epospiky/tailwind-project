@@ -4,22 +4,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="build/tailwind.css">
+    <style>
+        .greenfrdark{background-color: #CBFDC3;}
+        @media screen and (min-width:1024px){
+           .lg\:col-count-3{ column-count:3;}
+
+        }
+        @media screen and (min-width:1280px){
+           .xl\:col-count-4{ column-count:4;}
+           
+        }
+        @media screen and (min-width:768px){
+           .xl\:col-count-2{ column-count:2;}
+           
+        }
+    </style>
 </head>
 <body class="bg-white-100">
     <div class="px-6">
-        <div class="lg:h-screen">
+        <div class="lg:h-screen overflow-y-hidden">
             <nav class="relative flex justify-between items-center flex-wrap bg-white-100 pt-6 ">
                 <div id="logo" class="inline-block"><a href="#"><img id="logo-img" src="../img/logo-lg.png" alt=""></a></div>
                 <div id="handburger" class="lg:hidden "><button class="focus:outline-none" id="navbar-Btn"><img id="handburger-img" src="../img/handburger.png" alt=""></button>  </div>
                 <div class="relative  lg:w-auto sm:w-full  block flex-grow text-center  lg:inline-block" id="navbar">
                     <button class="absolute lg:hidden left-0 top-0 focus:outline-none" id="closeBtn"><img id="close-img" src="../img/x-circle.png" alt=""></button>
-                    <a class="text-gray-900 block lg:inline-block mt-12 lg:mt-0 lg:mr-4 font-semibold">Home</a>
-                    <a class="text-gray-900 block lg:inline-block mt-6 lg:mt-0 lg:mr-4 font-semibold">About</a>
-                    <a class="text-gray-900 block lg:inline-block mt-6 lg:mt-0 lg:mr-8 font-semibold" >Portfolio</a>
-                    <a class="lg:absolute text-gray-900 bg-indigo-100 py-2 px-0 lg:px-4 block lg:inline-block mt-12 lg:mt-0 lg:mr-0 right-0 font-semibold text-indigo-400 cont-me" >Contact Me</a>
-                    <div class="custom-control">
-                        <input type="checkbox" name="" id="customSwitch" class="custom-control-input">
-                        <label for="customSwitch" class="custom-control-label" onclick="darkMode()">Toggle DarkMode</label>
+                    <a class="text-gray-900 block lg:inline-block mt-12 lg:mt-0 lg:mr-10 ease-in-out transform lg:hover:scale-110 font-semibold">Home</a>
+                    <a class="text-gray-900 block lg:inline-block mt-6 lg:mt-0 lg:mr-10 ease-in-out transform lg:hover:scale-110 font-semibold">About</a>
+                    <a class="text-gray-900 block lg:inline-block mt-6 lg:mt-0 lg:mr-10 ease-in-out transform lg:hover:scale-110 font-semibold" >Portfolio</a>
+                    <a class="lg:absolute text-gray-900 bg-indigo-100 py-2 px-0 lg:px-4 block lg:inline-block ease-in-out transform lg:hover:scale-110 mt-12 lg:mt-0 lg:mr-0 right-0 font-semibold text-indigo-400 cont-me" >Contact Me</a>
+                    <div class="custom-control mt-2 lg:mt-0">
+                        <button type="checkbox" name="" id="customSwitch" class="w-10 h-10 border-none outline-none focus:outline-none p-2 bg-white text-white rounded-full" onclick="darkMode()"><img src="../img/moon.png" class="object-cover " id="mode-Img" alt="go to dark mode"></button>
                     </div>
                 </div>
 
@@ -43,10 +57,11 @@
                         </div>
                     </div>
 
-                    <div   class="relative  lg:w-auto  lg:w-1/2 right-0 mr-0 h-full overflow-y-hidden" >
+                    <div   class="relative lg:flex  lg:w-auto  lg:w-1/2 right-0 mr-0 h-auto overflow-y-hidden" >
+                        <div class="hidden lg:block relative lg:w-2/12"><h5 class="absolute bottom-0 right-0 -mr-4 mb-40 mb-8 sm:text-2Xl lg:text-4Xl font-extrabold  text-gray-400 uppercase tracking-widest transform mt-4 tracking-widest rotate-270 " >ARTS </h5></div>
                     <!--   <source  class="relative w-full object-cover right-0" srcset="../img/smallscreen.png" media="(max-width:640px)">
                         <source  class="relative w-full object-cover right-0"  srcset="../img/largescreen.png" media="(min-width:641px)">   
-                    -->  <img src="../img/largescreen.png" class="sm:h-screen m:h-auto relative w-full  right-0" alt="art image" srcset="">
+                    -->  <img src="../img/largescreen.png" class="lg:w-10/12 block sm:h-screen m:h-auto right-0 mr-0" alt="art image" srcset="">
                     </div>
                     <div class="relative block lg:hidden text-gray-800 bg-indigo-100 py-20 pl-12 pr-12 dm-bg">
                         <div class="absolute right-0 mr-6 top-0 mt-2">
@@ -73,7 +88,7 @@
                         <p class="mt-2 text-gray-800 pb-6 md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non sed mauris pellentesque mauris, 
                             lacinia diam lectus. Non gravida feugiat tortor proin eleifend aliquet orci cras. Dapibus ultricies 
                             sit tincidunt dolor. Ultrices ac proin lorem mattis ornare erat felis etiam. Odio cursus justo in amet 
-                            duis. Massa mattis nunc potenti gravida mauris duis sollicitudin elit. Dignissim urna diam venenatis 
+                            duis. Massa mattis nunc potenti gravida mauris duis sollicitudin elit. &#9786 Dignissim urna diam venenatis 
                             sapien mattis nulla malesuada amet. Facilisi risus adipiscing dolor tortor, mattis id proin. Urna, 
                             vel facilisi sed tortor id odio facilisis. Tempor augue urna ac elit imperdiet vitae mi semper magnis. 
                             Nisi, blandit a urna, at ut. Magna interdum nulla duis et. Cras risus amet, tellus consectetur. Vel 
@@ -84,67 +99,78 @@
         </div>
         <div class="port" >
             <h4 class="text-lg text-gray-900 text-center font-bold py-6">Portfolio</h4>
-                <div class="lg:grid gap-6  grid-cols-2">
-                    <div class="mt-2"><img src="../img/port-img1.png" class="object-cover w-full" alt=""></div>
+                <div class="lg:gap-6 md:col-count-2 lg:col-count-3 xl:col-count-4">
+                    <div class="inline-block mt-2 w-full h-auto"><img src="../img/port-img1.png" class="object-cover w-full inline-block" alt=""></div>
                     <!-- <div class="mt-2"><img src="../img/port-img2.png" class="object-cover w-full" alt=""></div> -->
-                    <div class="mt-2"><img src="../img/port-img3.png" class="object-cover w-full" alt=""></div>
-                    <div class="mt-2"><img src="../img/port-img4.png" class="object-cover w-full" alt=""></div>
-                    <div class="mt-2"><img src="../img/port-img5.png" class="object-cover w-full" alt=""></div>
-                    <div class="mt-2"><img src="../img/port-img6.png" class="object-cover w-full" alt=""></div>
-                    <div class="mt-2"><img src="../img/port-img7.png" class="object-cover w-full" alt=""></div>
+                    <div class=" lg:inline-block mt-2 w-full h-auto"><img src="../img/port-img3.png" class="object-cover w-full inline-block" alt=""></div>
+                    <div class="lg:inline-block mt-2 w-full h-auto"><img src="../img/port-img4.png" class="object-cover w-full inline-block" alt=""></div>
+                    <div class=" lg:inline-block mt-2 w-full h-auto"><img src="../img/port-img3.png" class="object-cover w-full inline-block" alt=""></div>
+                    <div class="lg:inline-block mt-2 w-full h-auto"><img src="../img/port-img6.png" class="object-cover w-full" alt=""></div>
+                    <div class="lg:inline-block mt-2 w-full h-auto"><img src="../img/port-img7.png" class="object-cover w-full" alt=""></div>
+                    <div class="lg:inline-block mt-2 w-full h-auto"><img src="../img/port-img4.png" class="object-cover w-full inline-block" alt=""></div>
+                    <div class="lg:inline-block mt-2 w-full h-auto"><img src="../img/port-img5.png" class="object-cover w-full" alt=""></div>
+                    <div class="lg:inline-block mt-2 w-full h-auto"><img src="../img/port-img6.png" class="object-cover w-full" alt=""></div>
+                    <div class="lg:inline-block mt-2 w-full h-auto"><img src="../img/port-img7.png" class="object-cover w-full" alt=""></div>
+                    <div class=" lg:inline-block mt-2 w-full h-auto"><img src="../img/port-img3.png" class="object-cover w-full inline-block" alt=""></div>
        
                 </div>
             </div>        
-         <div class="mt-8">
-            <div><img src="../img/perfectionist.png" class="object-cover w-full" alt=""></div>
-            <div class="bg-indigo-100 text-center px-4 py-6 dm-bg">
+         <div class="mt-8 lg:flex relative">
+            <div class="lg:hidden"><img src="../img/perfectionist.png" class="object-cover w-full" alt=""></div>
+            <div class="bg-indigo-100 text-center px-4 py-6 lg:w-7/12 lg:p-20 dm-bg">
                 <h5 class="absolute left-0 font-bold text-lg text-gray-400 uppercase  mt-4 tracking-widest transform rotate-270 " >REVIEWS</h5>
                 <h4 class="text-md tracking-wide text-gray-900 text-center font-bold py-6">PERFERCTIONIST</h4>
-                <p class="pl-4 text-gray-800 text-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient a donec 
-                    ipsum, scelerisque morbi 
+                <p class="pl-4 text-gray-800 text-md ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient a donec ipsum, scelerisque 
+                    morbi malesuada. Sed nibh justo, pulvinar orci scelerisque a egestas. Sit ultricies nunc, turpis in sed mauris lectus nisi. 
+                    Scelerisque suspendisse mattis a sit mauris faucibus sed. Sit eu habitasse tortor lectus quam purus velit, id.
                 </p>
             </div>
+            <div class="relative hidden lg:block bottom-0 top-0 mt-8 -mb-8 right-0 -ml-6 w-4/12"><img src="../img/perfectionist.png" class=" object-cover w-full h-full" alt=""></div>
+            <div class="hidden lg:block absolute cursor-hand animate-bounce transform ease-in hover:scale-125 hover:mr-4  bottom-0  right-0 mr-12 inline-block h-12 w-12 p-3 bg-indigo-100 rounded-full" id="more_btn"><img src="../img/arrow-right.png" alt=""></div>
         </div>
-        <div class="mt-4 text-center px-4 letstalk text-gray-900">
-            <h4 class="text-lg  font-bold py-2">Let’s Talk</h4>
-            <p class="text-md  ">I’ll love to hear from you, share your thought on my art.
-            </p>
-            <form action="">
-                <input  type="text" class="block w-full py-2 px-2 outline-none  border-b-2 border-gray-700  placeholder-gray-700 dk-input" placeholder="Name">
-                <input  type="text" class="block w-full py-2 px-2  outline-none  border-b-2 border-gray-700  placeholder-gray-700 dk-input" placeholder="Email">
-                <textarea name="" id="" cols="30" rows="10" class="h-10 w-full outline-none border-b-2 border-gray-700  py-2 px-2 placeholder-gray-700 dk-input" placeholder="Message"></textarea>
-                <button class="mt-2 w-20 py-4 px-6 box-content outline-none focus:outline-none rounded hover:shadow-outline-gray-300 hover:shadow-md hover:border-b-2 border-gray-700"><img src="../img/arrow-right.png" class="w-full h-8" alt=""></button>
-            </form>
-        </div>
-        <div class="relative left-0 right-0 -ml-6 px-6 -mr-6 mt-4 py-6 text-gray-800 bg-indigo-100 dm-bg">
-            <div><img src="../img/logo-lg.png"  class=" " alt="logo"></div>
-            <div class="mt-4 ">
-                <h3 class="text-lg font-semibold">Address</h3>
-                <p class="text-md">546, New Avenue 
-                    Somewhere, NYC</p>
+        <div class="lg:mt-16 lg:flex ">
+            <div class="mt-4 lg:mt-0 lg:w-1/2 lg:mr-8 text-center px-4 letstalk text-gray-900">
+                <h4 class="text-lg  font-bold py-2">Let’s Talk</h4>
+                <p class="text-md  ">I’ll love to hear from you, share your thought on my art.
+                </p>
+                <form action="">
+                    <input  type="text" class="block w-full py-2 px-2 outline-none  border-b-2 border-gray-700  placeholder-gray-700 dk-input" placeholder="Name">
+                    <input  type="text" class="block w-full py-2 px-2  outline-none  border-b-2 border-gray-700  placeholder-gray-700 dk-input" placeholder="Email">
+                    <textarea name="" id="" cols="30" rows="10" class="h-10 w-full outline-none border-b-2 border-gray-700  py-2 px-2 placeholder-gray-700 dk-input" placeholder="Message"></textarea>
+                    <button class="mt-2 w-20 py-1 px-1 box-content outline-none focus:outline-none ease-in transform hover:scale-110 rounded"><span class="inline-block text-6xl leading-none" id="right_arrow_dark">&#10148</span><!--<img  id="right_arrow_light" src="../img/arrow-right.png" class="hidden w-full h-8" alt="">--></button>
+                </form>
             </div>
-            <div class="mt-4">
-                <h3 class="text-lg font-semibold">Contact Me</h3>
-                <p class="text-md">letstalk@momento.com
-                    +234 (080) 898 24939</p>
-            </div>
-            <div class="mt-4">
-                <h3 class="text-lg font-semibold">Social</h3>
-                <div class="mt-2">
-                <a href="#" class="inline-block mr-4"><img src="../img/instagram.png" alt=""></a>
-                <a href="#" class="inline-block mr-4"><img src="../img/linkedin.png" alt=""></a>
-                <a href="#" class="inline-block mr-4"><img src="../img/facebook.png" alt=""></a>
-                <a href="#" class="inline-block mr-4"><img src="../img/twitter.png" alt=""></a>
+            <div class="relative left-0 right-0 -ml-6 px-6 py-6 -mr-6 mt-4 lg:mt-0 lg:w-1/2 lg:ml-8 lg:pl-20 lg:pt-12  text-gray-800 bg-indigo-100 dm-bg">
+                <div><img src="../img/logo-lg.png"  class=" " alt="logo"></div>
+                <div class="mt-4 ">
+                    <h3 class="text-lg font-semibold">Address</h3>
+                    <p class="text-md">546, New Avenue 
+                        Somewhere, NYC</p>
                 </div>
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Contact Me</h3>
+                    <p class="text-md">letstalk@momento.com
+                        +234 (080) 898 24939</p>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Social</h3>
+                    <div class="mt-2">
+                    <a href="#" class="inline-block mr-4 ease-in transform hover:scale-110"><img src="../img/instagram.png" alt=""></a>
+                    <a href="#" class="inline-block mr-4 ease-in transform hover:scale-110"><img src="../img/linkedin.png" alt=""></a>
+                    <a href="#" class="inline-block mr-4 ease-in transform hover:scale-110"><img src="../img/facebook.png" alt=""></a>
+                    <a href="#" class="inline-block mr-4 ease-in transform hover:scale-110"><img src="../img/twitter.png" alt=""></a>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
-
-
+        </div>    
+        <p class="my-12 mb-6 text-center text-gray-500">Copyrights 2020. All rights reserved. Developed with <span>&#9829</span> by <a class="text-gray-700 underline-none" href="#">Ernest Paul</a></p>
     </div> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
+            
              var $window = $(window);
            var  $windowSize = $window.width();
            if ($windowSize > 1000) {
@@ -174,24 +200,38 @@
                 var darkInput = $('.dk-input');
                 var contactMe = $('.cont-me');
                 var port_header = $('.port h4');
+                 var moreBtn = $('#more_btn');
+                 var customSwitch = $('#customSwitch');
+                 var right_arrow_dark = $('#right_arrow_dark');
+                 var right_arrow_light = $('#right_arrow_light'); 
 
 
                body.toggleClass('bg-white-300 bg-gray-900');
                navItems.toggleClass('text-gray-900 text-white');
-               contactMe.toggleClass('bg-green-100 text-gray-900 text-green-400');
-               dm_bg.toggleClass('bg-indigo-100 bg-green-300');
+               contactMe.toggleClass('bg-green-100 text-gray-900 greenfrdark');
+               dm_bg.toggleClass('bg-indigo-100 greenfrdark');
                port_header.toggleClass('text-gray-900 text-gray-100')
                letstalk.toggleClass('text-gray-900 text-white');
                darkInput.toggleClass('bg-gray-900 border-gray-700 border-gray-100  placeholder-gray-700  placeholder-gray-100');
+                moreBtn.toggleClass('bg-indigo-500 greenfrdark');
+                right_arrow_dark.toggleClass('hidden');
+                right_arrow_light.toggleClass('hidden');
 
                if (body.hasClass('bg-gray-900')) {
                    $('#logo-img').attr('src', '../img/logo-dark.png');
                    $('#handburger-img').attr('src', '../img/handburger-dark.png');
                    $('#close-img').attr('src', '../img/x-circle-dark.png'); 
+                   $('#mode-Img').slideToggle(200, function(){
+                       $('#mode-Img').attr('src', '../img/sun.png').slideToggle(200);
+                   });
                } else{
                 $('#logo-img').attr('src', '../img/logo-lg.png');
                    $('#handburger-img').attr('src', '../img/handburger.png');
                    $('#close-img').attr('src', '../img/x-circle.png'); 
+
+                   $('#mode-Img').slideToggle(200, function(){
+                       $('#mode-Img').attr('src', '../img/moon.png').slideToggle(200);
+                   });
                }
 
            }
